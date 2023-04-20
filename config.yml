@@ -1,19 +1,19 @@
 baseURL: # if your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
-title: charlola.mode
+title: Mattia Curri
 paginate: 5
 theme: charlolamode
 
 
 
 menu:
-    main:
-        - name: Contact
-          url: /contact/
-          weight: 30
-        - name: Articles
-          url: /articles/
-          weight: 20
-        - name: Projects
+    #main:
+        #- name: Contact
+          #url: /contact/
+          #weight: 30
+        #- name: Articles
+          #url: /articles/
+          #weight: 20
+        #- name: Projects
           url: /projects/
           weight: 15
 
@@ -27,7 +27,7 @@ menu:
 
 
 params:
-    author: Author's Name
+    author: Mattia Curri
 
 
     defaultTheme: auto
@@ -45,28 +45,28 @@ params:
         title: Ciao!
         description: |
 
-          Hello, I am Joe.
-           I am a software developer. 
+          Mattia | 20 | Italian | Computer Science @ UniBa
         
 
-          This is a minimalistic theme template for websites.
         imageUrl: "/images/profile.png"
-        imageTitle: my image
+        imageTitle: imgprofile
         # imageWidth: 120
         # imageHeight: 120
-        buttons:
-            - name: Don't click me
-              url: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+        #buttons:
+            #- name: Don't click me
+              #url: https://www.youtube.com/watch?v=dQw4w9WgXcQ
     mainSections:
       - articles
 
     socialIcons:
-        - name: buymeacoffee
-          url: "https://ko-fi.com/heycharlola"
+        #- name: buymeacoffee
+          #url: "https://ko-fi.com/heycharlola"
         - name: github
-          url: "https://github.com/charlola"
+          url: "https://github.com/mattiacurri"
         - name: linkedin
-          url: "https://www.linkedin.com/in/heycharlola/"
+          url: "https://www.linkedin.com/in/mattiacurri/"
+        - name: youtube
+          url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
 
       # add more social icons. find more in svg.html file
       # - name: youtube
