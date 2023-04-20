@@ -5,7 +5,7 @@ theme: charlolamode
 
 
 
-menu:
+# menu:
     #main:
         #- name: Contact
           #url: /contact/
