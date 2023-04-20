@@ -14,8 +14,8 @@ menu:
           #url: /articles/
           #weight: 20
         #- name: Projects
-          url: /projects/
-          weight: 15
+          #url: /projects/
+          #weight: 15
 
      # - name: Categories
         #   url: /categories/
