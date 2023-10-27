@@ -14,6 +14,7 @@ disableKinds = ["taxonomy", "term"]
   image = "author.jpg"  # path relative to static directory
 
   links = [
+    { cv = { href = "CV_Curri_eng.pdf", text = "Curriculum" } },
     { github = { href = "https://github.com/mattiacurri", text = "Github" } },
     { email = { href = "mailto:mattiacurri@proton.me?subject=[FROM mattiacurri.me]&body=Ciao! ti chiedo di lasciare la dicitura inserita nell'oggetto, mi iuterà a capire da dove proviene la mail! Grazie infinite.", text = "Email" } },
     { linkedin = { href = "https://linkedin.com/in/mattiacurri", text = "Linkedin" } },
