@@ -10,7 +10,7 @@ disableKinds = ["taxonomy", "term"]
 
 [author]
   name = "Ciao!"
-  headline = "Mattia | 20 | Italian | Computer Science @ UniBa"
+  headline = "Mattia | 21 | Italian | Computer Science @ UniBa"
   image = "author.jpg"  # path relative to static directory
 
   links = [
