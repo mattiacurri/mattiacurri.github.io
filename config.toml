@@ -15,7 +15,7 @@ disableKinds = ["taxonomy", "term"]
 
   links = [
     { github = { href = "https://github.com/mattiacurri", text = "Github" } },
-    { email = { href = "mailto:mattiacurri@proton.me&subject=[FROM mattiacurri.me]&body=Ciao! ti chiedo di lasciare la dicitura inserita nell'oggetto, mi iuterà a capire da dove proviene la mail! Grazie infinite.", text = "Email" } },
+    { email = { href = "mailto:mattiacurri@proton.me?subject=[FROM mattiacurri.me]&body=Ciao! ti chiedo di lasciare la dicitura inserita nell'oggetto, mi iuterà a capire da dove proviene la mail! Grazie infinite.", text = "Email" } },
     { linkedin = { href = "https://linkedin.com/in/mattiacurri", text = "Linkedin" } },
     # { link = "https://link-to-some-website.com/" },
     # { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
