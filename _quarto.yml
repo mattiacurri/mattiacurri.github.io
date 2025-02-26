@@ -1,0 +1,35 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Mattia Curri"
+  favicon: static/favicon.png
+  navbar:
+    right:
+      - text: About
+        href: about.qmd
+      - text: Notes
+        file: notes.qmd
+  page-footer:
+    center:
+      - icon: github
+        href: https://github.com/mattiacurri
+      - icon: linkedin
+        href: https://www.linkedin.com/in/mattiacurri/
+      - icon: twitter-x
+        href: https://x.com/mcurri_
+      - icon: envelope
+        href: mailto:mattiacurri+website@proton.me
+      - icon: youtube
+        href: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+    right: |
+        <span class="faux-block">Made with [Quarto](https://quarto.org/)</span>
+        <span class="faux-block">View the source at [{{< fa brands github >}} GitHub]({{< var repo-url >}})</span>
+format:
+  html:
+    theme: 
+      light: static/theme.scss
+      dark: darkly # TODO: Add dark theme
+
+

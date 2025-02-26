@@ -1,0 +1,29 @@
+---
+title: "Notes"
+description: "A list of my notes"
+listing:
+  - id: master
+    contents: master.yml
+    sort: "date desc"
+    template: listing.ejs
+  - id: bachelor
+    contents: bachelor.yml
+    sort: "date desc"
+    template: listing.ejs
+title-block-banner: "#fff"
+page-layout: full
+toc: true
+toc-location: right
+toc-title: Type
+---
+
+
+## Master's Degree (ENG)
+
+:::{#master}
+:::
+
+## Bachelor's Degree (ITA)
+
+:::{#bachelor}
+:::

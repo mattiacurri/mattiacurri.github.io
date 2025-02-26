@@ -1,0 +1,100 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Mattia Curri",
+    "section": "",
+    "text": "I am a MSc Computer Science student specializing in Artificial Intelligence at UniBa.\n\nRead More →"
+  },
+  {
+    "objectID": "index.html#about-me",
+    "href": "index.html#about-me",
+    "title": "Mattia Curri",
+    "section": "",
+    "text": "Ciao! I’m Mattia, an Italian Computer Science bachelor graduate. I’m interested in expanding my cultural boundaries, improving my technical and professional knowledge, and learning from a pool of professionals to get things done. I am willingto work in the software development field, although I have little experience, I have a lot of interest and willingness to learn new things. Actually, I’m learning about Machine Learning and Deep Learning."
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Mattia Curri",
+    "section": "Education",
+    "text": "Education"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Ciao!",
+    "section": "",
+    "text": "GitHub\n  \n  \n    \n     LinkedIn\n  \n  \n    \n     X\n  \n  \n    \n     Email\n  \n  \n    \n     Youtube\nI’m Mattia, an Italian Computer Science bachelor graduate, MSc Student in Computer Science specializing in Artificial Intelligence. I’m interested in expanding my cultural boundaries, improving my technical and professional knowledge, and learning from a pool of professionals to get things done. I am willing to work in the software development field, although I have little experience, I have a lot of interest and willingness to learn new things. Actually, I’m learning about Machine Learning and Deep Learning."
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "Ciao!",
+    "section": "EDUCATION",
+    "text": "EDUCATION\n Sep 2024 - current\nMaster’s Degree in Computer Science - Artificial Intelligence Track @ University of Bari, Italy\n Current GPA: /4.0\n\nCourse taught in English\nRelevant courses taken: /\n\n\n Sep 2021 - Jul 2024\n Bachelor’s Degree in Informatica (Computer Science) @ University of Bari, Italy\n 110 with honours/110\n\nThesis in Computational Intelligence entitled: Supervised Learning Techniques for Semantic Segmentation of Aerial Images of Agricultural Fields.\nRelevant courses taken: Computational Intelligence, Algorithms and Data Structures, Databases, Software Engineering, Advanced Methods of Programming, Knowledge Engineering, Information Retrieval Methods, Human-Computer Interaction, Computer Networks."
+  },
+  {
+    "objectID": "about.html#projects",
+    "href": "about.html#projects",
+    "title": "Ciao!",
+    "section": "PROJECTS",
+    "text": "PROJECTS\nCorporate Credit Rating Prediction\n Python Scikit-learn Pandas Pgmpy Imblearn Matplotlib Numpy\n\nKnowledge Engineering exam project (30 with honours/30)\nThe goal of the project is to successfully predict the rating assigned by rating agencies to a company\nDealed with unbalanced dataset using Class Weights, SMOTE, ADASYN, SMOTETomek, SMOTEENN\nImplemented a Bayesian Network to do probabilistic queries, with a correlation score based on Balanced Accuracy of 0.59\nAchieved up to 86% of Balanced Accuracy using XGBoost and Random Forest\n\n\nK-Means - Team Project\n Java Spring Boot Android MySQL Android Studio Github Gradle\n\nK-means algorithm realized in Java for Advanced Programming Methods exam (30 with honours/30)\nMultithreading, client and server, DBMS integration, containers, exceptions, serialization, concurrency\nBase project involved a CLI client/server application, written in Java\nProject extended with a Spring Boot server and an Android client\nAndroid UI Design realized using Fragments and Activities. The server handles client calls using cookies\n\n\nBattleship - Team Project\n Java JUnit Git Github Agile SCRUM Docker Gradle\n\nSoftware Engineering exam project (30 with honours/30)\nBattleship game realized in Java in an Agile way according to the SCRUM methodology\nLed a team of 5 people through 3 Sprint\nLearned the basics of Docker, Gradle, Git and Github\nWritten JUnit assertion tests, achieving 97% of test coverage"
+  },
+  {
+    "objectID": "about.html#achievements",
+    "href": "about.html#achievements",
+    "title": "Ciao!",
+    "section": "ACHIEVEMENTS",
+    "text": "ACHIEVEMENTS\nCyberChallenge 2024\n Web Binary Exploitation Cryptography Network\nQualified to the national stage by ranking in the top 6 of the venue, taking 21st place out of 43 teams.\nQualified for the local stage by being in the top 20 of the selection."
+  },
+  {
+    "objectID": "about.html#additional",
+    "href": "about.html#additional",
+    "title": "Ciao!",
+    "section": "ADDITIONAL",
+    "text": "ADDITIONAL\nLanguages: Italian (mothertongue), English (B2 Cambridge)"
+  },
+  {
+    "objectID": "notes.html#quarto",
+    "href": "notes.html#quarto",
+    "title": "Notes",
+    "section": "Quarto",
+    "text": "Quarto"
+  },
+  {
+    "objectID": "notes.html#bachelors-degree",
+    "href": "notes.html#bachelors-degree",
+    "title": "Notes",
+    "section": "Bachelor’s Degree",
+    "text": "Bachelor’s Degree\n\n\n    \n    \n        \n            \n                \n                Ingegneria della Conoscenza \n                \n            \n            Appunti di Ingegneria della Conoscenza - A.A. 2023-2024\n        \n    \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "notes.html",
+    "href": "notes.html",
+    "title": "Notes",
+    "section": "",
+    "text": "Formal Methods for Computer Science (WIP) \n                \n            \n            Formal Methods course note - A.A. 2024-2025\n        \n    \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "notes.html#masters-degree",
+    "href": "notes.html#masters-degree",
+    "title": "Notes",
+    "section": "",
+    "text": "Formal Methods for Computer Science \n                \n            \n            Formal Methods course note - A.A. 2024-2025\n        \n    \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "notes.html#masters-degree-eng",
+    "href": "notes.html#masters-degree-eng",
+    "title": "Notes",
+    "section": "",
+    "text": "Formal Methods for Computer Science (WIP) \n                \n            \n            Formal Methods course note - A.A. 2024-2025\n        \n    \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "notes.html#bachelors-degree-ita",
+    "href": "notes.html#bachelors-degree-ita",
+    "title": "Notes",
+    "section": "Bachelor’s Degree (ITA)",
+    "text": "Bachelor’s Degree (ITA)\n\n\n    \n    \n        \n            \n                \n                Ingegneria della Conoscenza \n                \n            \n            Appunti di Ingegneria della Conoscenza - A.A. 2023-2024\n        \n    \n    \n    \n        \n            \n                \n                Metodi Avanzati di Programmazione (WIP) \n                \n            \n            Appunti di Metodi Avanzati di Programmazione (Corso A-L) - A.A. 2022-2023\n        \n    \n    \n\n\nNo matching items"
+  }
+]

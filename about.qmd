@@ -1,0 +1,112 @@
+---
+title: "Ciao!"
+page-layout: full
+about:
+  id: hero-heading
+  template: jolla
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/mattiacurri
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/mattiacurri/
+    - icon: twitter-x
+      text: X
+      href: https://x.com/mcurri_
+    - icon: envelope
+      text: Email
+      href: mailto:mattiacurri+website@proton.me
+    - icon: youtube
+      text: Youtube
+      href: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+---
+
+:::{#hero-heading}
+:::
+
+I’m Mattia, an Italian Computer Science bachelor graduate, MSc Student in Computer Science specializing in Artificial Intelligence. I’m interested in expanding my cultural boundaries, improving my technical and professional knowledge, and learning from a pool of professionals to get things done. I am willing to work in the software development field, although I have little experience, I have a lot of interest and willingness to learn new things. Actually, I’m learning about Machine Learning and Deep Learning.
+
+
+
+## EDUCATION
+{{< fa calendar >}} Sep 2024 - current
+
+**Master’s Degree in Computer Science - Artificial Intelligence Track** @ University of Bari, Italy
+
+{{< fa clipboard-checl >}} Current GPA: /4.0 
+
+- Course taught in English
+- Relevant courses taken: /
+
+<hr>
+
+{{< fa calendar >}} Sep 2021 - Jul 2024
+
+{{< fa graduation-cap >}} **Bachelor’s Degree in Informatica (Computer Science)** @ University of Bari, Italy
+
+{{< fa graduation-cap >}} **110 with honours/110** 
+
+- **Thesis in Computational Intelligence entitled: Supervised Learning Techniques for Semantic Segmentation of Aerial Images of Agricultural Fields.**
+
+- **Relevant courses taken**: Computational Intelligence, Algorithms and Data Structures, Databases, Software Engineering, Advanced
+Methods of Programming, Knowledge Engineering, Information Retrieval Methods, Human-Computer Interaction, Computer Networks.
+
+## PROJECTS
+[**Corporate Credit Rating Prediction**](https://github.com/mattiacurri/ProgettoICON)
+
+{{< fa code >}} ```Python``` ```Scikit-learn``` ```Pandas``` ```Pgmpy``` ```Imblearn``` ```Matplotlib``` ```Numpy```
+
+- Knowledge Engineering exam project (30 with honours/30)
+
+- The goal of the project is to successfully predict the rating assigned by rating agencies to a company
+
+- Dealed with unbalanced dataset using `Class Weights`, `SMOTE`, `ADASYN`, `SMOTETomek`, `SMOTEENN`
+
+- Implemented a `Bayesian Network` to do probabilistic queries, with a correlation score based on `Balanced Accuracy` of 0.59
+
+- Achieved up to 86% of `Balanced Accuracy` using `XGBoost` and `Random Forest`
+
+<hr>
+
+[**K-Means - Team Project**](https://github.com/Davy592/KMeansEsteso)
+
+{{< fa code >}} ```Java``` ```Spring Boot``` ```Android``` ```MySQL``` ```Android Studio``` ```Github``` ```Gradle```
+
+- K-means algorithm realized in Java for Advanced Programming Methods exam (30 with honours/30)
+
+- `Multithreading`, client and server, `DBMS` integration, containers, exceptions, serialization, concurrency
+
+- Base project involved a `CLI` client/server application, written in Java
+
+- Project extended with a `Spring Boot` server and an `Android` client
+
+- Android UI Design realized using `Fragments` and `Activities`. The server handles client calls using `cookies`
+
+<hr>
+
+[**Battleship - Team Project**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard)
+
+{{< fa code >}} ```Java``` ```JUnit``` ```Git``` ```Github``` ```Agile``` ```SCRUM``` ```Docker``` ```Gradle```
+
+- Software Engineering exam project (30 with honours/30)
+
+- Battleship game realized in Java in an Agile way according to the SCRUM methodology
+
+- Led a team of 5 people through 3 Sprint
+
+- Learned the basics of `Docker`, `Gradle`, `Git` and `Github`
+
+- Written `JUnit` assertion tests, achieving 97% of test coverage
+
+## ACHIEVEMENTS
+[**CyberChallenge 2024**](https://cyberchallenge.it/)
+
+{{< fa code >}} ```Web``` ```Binary``` ```Exploitation``` ```Cryptography``` ```Network```
+
+**Qualified to the national stage by ranking in the top 6 of the venue, taking 21st place out of 43 teams.**
+
+Qualified for the local stage by being in the top 20 of the selection.
+
+## ADDITIONAL
+Languages: Italian (mothertongue), English (B2 Cambridge)

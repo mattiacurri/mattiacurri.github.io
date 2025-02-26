@@ -1,0 +1,36 @@
+---
+title: "Mattia Curri"
+image: static/author.jpg
+comments: false
+toc: false
+about:
+  template: jolla
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/mattiacurri
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/mattiacurri/
+    - icon: twitter-x
+      text: X
+      href: https://x.com/mcurri_
+    - icon: envelope
+      text: Email
+      href: mailto:mattiacurri+website@proton.me
+    - icon: youtube
+      text: Youtube
+      href: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+---
+
+<!-- ## About Me
+
+Ciao! I’m Mattia, an Italian Computer Science bachelor graduate. I’m interested in expanding my cultural boundaries, improving my technical and professional knowledge, and learning from a pool of professionals to get things done. I am willingto work in the software development field, although I have little experience, I have a lot of interest and willingness to learn new things. Actually, I’m learning about Machine Learning and Deep Learning.
+
+## Education -->
+
+I am a MSc Computer Science student specializing in Artificial Intelligence at [UniBa](https://www.uniba.it/it/ricerca/dipartimenti/informatica).<br>
+
+::: {style="text-align: right"}
+[Read More →](about.qmd)
+:::

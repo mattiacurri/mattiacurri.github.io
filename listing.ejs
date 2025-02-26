@@ -1,0 +1,18 @@
+```{=html}
+<div class="notes">
+    <% for (const item of items) { %>
+    <div class="note-entry">
+        <div class="body">
+            <p class="note-title">
+                <% if (item.url) { %>
+                <a href="<%= item.url %>" target="_blank"><%= item.title %></a> 
+                <% } else { %>
+                <%= item.title %> 
+                <% } %>
+            </p>
+            <p class="note-description"><%= item.description %></p>
+        </div>
+    </div>
+    <% } %>
+</div>
+```
