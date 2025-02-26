@@ -5,6 +5,7 @@ project:
 website:
   title: "Mattia Curri"
   favicon: static/favicon.png
+  google-analytics: "G-MC38LFVB06"
   navbar:
     right:
       - text: About
