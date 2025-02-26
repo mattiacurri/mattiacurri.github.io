@@ -1,1 +1,0 @@
-Per eventuali contenuti, creare file md in questa cartella e referenziarli come "nome_file/"
