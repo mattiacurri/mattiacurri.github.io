@@ -1,26 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Mattia Curri",
-    "section": "",
-    "text": "I am a MSc Computer Science student specializing in Artificial Intelligence at UniBa.\n\nRead More →"
-  },
-  {
-    "objectID": "index.html#about-me",
-    "href": "index.html#about-me",
-    "title": "Mattia Curri",
-    "section": "",
-    "text": "Ciao! I’m Mattia, an Italian Computer Science bachelor graduate. I’m interested in expanding my cultural boundaries, improving my technical and professional knowledge, and learning from a pool of professionals to get things done. I am willingto work in the software development field, although I have little experience, I have a lot of interest and willingness to learn new things. Actually, I’m learning about Machine Learning and Deep Learning."
-  },
-  {
-    "objectID": "index.html#education",
-    "href": "index.html#education",
-    "title": "Mattia Curri",
-    "section": "Education",
-    "text": "Education"
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "Ciao!",
@@ -56,18 +35,11 @@
     "text": "ADDITIONAL\nLanguages: Italian (mothertongue), English (B2 Cambridge)"
   },
   {
-    "objectID": "notes.html#quarto",
-    "href": "notes.html#quarto",
-    "title": "Notes",
-    "section": "Quarto",
-    "text": "Quarto"
-  },
-  {
-    "objectID": "notes.html#bachelors-degree",
-    "href": "notes.html#bachelors-degree",
-    "title": "Notes",
-    "section": "Bachelor’s Degree",
-    "text": "Bachelor’s Degree\n\n\n    \n    \n        \n            \n                \n                Ingegneria della Conoscenza \n                \n            \n            Appunti di Ingegneria della Conoscenza - A.A. 2023-2024\n        \n    \n    \n\n\nNo matching items"
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Mattia Curri",
+    "section": "",
+    "text": "I am a MSc Computer Science student specializing in Artificial Intelligence at UniBa.\n\nRead More →"
   },
   {
     "objectID": "notes.html",
@@ -75,13 +47,6 @@
     "title": "Notes",
     "section": "",
     "text": "Formal Methods for Computer Science (WIP) \n                \n            \n            Formal Methods course note - A.A. 2024-2025\n        \n    \n    \n\n\nNo matching items"
-  },
-  {
-    "objectID": "notes.html#masters-degree",
-    "href": "notes.html#masters-degree",
-    "title": "Notes",
-    "section": "",
-    "text": "Formal Methods for Computer Science \n                \n            \n            Formal Methods course note - A.A. 2024-2025\n        \n    \n    \n\n\nNo matching items"
   },
   {
     "objectID": "notes.html#masters-degree-eng",
