@@ -37,10 +37,6 @@
   --quarto-font-monospace: "Fira Code";
 }
 
-:root {
-  --quarto-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
-
 code span.al {
   background-color: #2a0f15;
   font-weight: bold;
@@ -190,4 +186,4 @@ code span.wa {
   content: "</";
 }
 
-/*# sourceMappingURL=7cf46d0b89a2ca7986965f3478602e6f.css.map */
+/*# sourceMappingURL=3c003c68bc95111b307ee361ebc70221.css.map */

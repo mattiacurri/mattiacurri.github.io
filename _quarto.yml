@@ -7,6 +7,7 @@ website:
   favicon: static/favicon.png
   google-analytics: "G-MC38LFVB06"
   navbar:
+    foreground: secondary
     right:
       - text: About
         href: about.qmd
@@ -30,7 +31,7 @@ website:
 format:
   html:
     theme: 
+      dark: static/dark-theme.scss
       light: static/theme.scss
-      dark: darkly # TODO: Add dark theme
 
 

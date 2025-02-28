@@ -10,7 +10,7 @@ listing:
     contents: bachelor.yml
     sort: "date desc"
     template: listing.ejs
-title-block-banner: "#fff"
+title-block-banner: true
 page-layout: full
 toc: true
 toc-location: right
