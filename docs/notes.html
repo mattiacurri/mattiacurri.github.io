@@ -132,6 +132,34 @@ ul.task-list li input[type="checkbox"] {
       window['quarto-listing-loaded']();
     }
   })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-tutorato .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-description','listing-url',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-description","listing-url"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-tutorato'] = new List('listing-tutorato', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
   </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MC38LFVB06"></script>
 
@@ -489,8 +517,22 @@ window.Quarto = {
 </section>
 <section id="tutorato-ita" class="level2">
 <h2 class="anchored" data-anchor-id="tutorato-ita">Tutorato (ITA)</h2>
-<div id="tutorato">
-
+<div id="listing-tutorato" class="quarto-listing quarto-listing-container-custom">
+<div class="notes">
+    
+    <div class="note-entry">
+        <div class="body">
+            <p class="note-title">
+                
+                <a href="https://mattiacurri.github.io/tutorato" target="_blank">Tutorato Programmazione</a> 
+                
+            </p>
+            <p class="note-description">Informazioni e materiale preparato e creato per il Tutorato di Programmazione - A.A. 2025-2026</p>
+        </div>
+    </div>
+    
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
 </div>
 
 
