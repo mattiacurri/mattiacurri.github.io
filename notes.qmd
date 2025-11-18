@@ -10,6 +10,10 @@ listing:
     contents: bachelor.yml
     sort: "date desc"
     template: listing.ejs
+  - id: tutorato
+    contents: tutorato.yml
+    sort: "date desc"
+    template: listing.ejs
 title-block-banner: true
 page-layout: full
 toc: true
