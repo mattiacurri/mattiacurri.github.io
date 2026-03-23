@@ -9,8 +9,8 @@ website:
   navbar:
     foreground: secondary
     right:
-      - text: About
-        href: about.qmd
+      - text: Curriculum
+        href: https://mattiacurri.github.io/Curriculum-Vitae/
       - text: Notes
         file: notes.qmd
   page-footer:
@@ -22,7 +22,7 @@ website:
       - icon: twitter-x
         href: https://x.com/mcurri_
       - icon: envelope
-        href: mailto:mattiacurri+website@proton.me
+        href: mailto:mattia2002@gmail.com
       - icon: youtube
         href: https://www.youtube.com/watch?v=dQw4w9WgXcQ
     right: |
