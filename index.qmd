@@ -32,5 +32,5 @@ Ciao! I’m Mattia, an Italian Computer Science bachelor graduate. I’m interes
 I am a MSc Computer Science student specializing in Artificial Intelligence at [UniBa](https://www.uniba.it/it/ricerca/dipartimenti/informatica).<br>
 
 ::: {style="text-align: right"}
-[Read More →](about.qmd)
+[Read More →](https://mattiacurri.github.io/Curriculum-Vitae/)
 :::
