@@ -14,10 +14,39 @@
 <style>
   .theme-icon {
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    background: var(--ripple-color, #0d0d0d);
+    clip-path: circle(0% at 50% 50%);
+    opacity: 0;
+  }
+
+  body.animating-theme::after {
+    animation: theme-ripple 0.55s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  @keyframes theme-ripple {
+    0% {
+      opacity: 1;
+      clip-path: circle(0% at var(--ripple-x, 50%) var(--ripple-y, 50%));
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      clip-path: circle(150% at var(--ripple-x, 50%) var(--ripple-y, 50%));
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
+    body::after { display: none; }
     .theme-icon {
       transition: opacity 0.15s;
     }
@@ -28,21 +57,11 @@
   const toggle = document.getElementById('theme-toggle');
   const sun = document.getElementById('sun-icon');
   const moon = document.getElementById('moon-icon');
+  const root = document.documentElement;
 
   let animating = false;
 
-  function setTheme(theme, animate = true) {
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-
-    if (!animate) {
-      sun.style.opacity = theme === 'dark' ? '0' : '1';
-      sun.style.transform = theme === 'dark' ? 'rotate(90deg) scale(0.5)' : 'rotate(0deg) scale(1)';
-      moon.style.opacity = theme === 'dark' ? '1' : '0';
-      moon.style.transform = theme === 'dark' ? 'rotate(0deg) scale(1)' : 'rotate(-90deg) scale(0.5)';
-      return;
-    }
-
+  function setIconState(theme) {
     if (theme === 'dark') {
       sun.style.opacity = '0';
       sun.style.transform = 'rotate(90deg) scale(0.5)';
@@ -56,15 +75,48 @@
     }
   }
 
-  // init without animation
-  const initial = document.documentElement.getAttribute('data-theme') || 'light';
-  setTheme(initial, false);
+  function setTheme(theme) {
+    root.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    setIconState(theme);
+  }
 
-  toggle.addEventListener('click', () => {
+  const initial = root.getAttribute('data-theme') || 'light';
+  setTheme(initial);
+
+  toggle.addEventListener('click', (e) => {
     if (animating) return;
     animating = true;
-    const current = document.documentElement.getAttribute('data-theme') || 'light';
-    setTheme(current === 'dark' ? 'light' : 'dark');
-    setTimeout(() => { animating = false; }, 400);
+
+    const current = root.getAttribute('data-theme') || 'light';
+    const next = current === 'dark' ? 'light' : 'dark';
+
+    const rect = toggle.getBoundingClientRect();
+    const x = rect.left + rect.width / 2;
+    const y = rect.top + rect.height / 2;
+
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReduced) {
+      setTheme(next);
+      animating = false;
+      return;
+    }
+
+    const rippleColor = next === 'dark' ? '#0d0d0d' : '#f5f4f0';
+    root.style.setProperty('--ripple-color', rippleColor);
+    root.style.setProperty('--ripple-x', x + 'px');
+    root.style.setProperty('--ripple-y', y + 'px');
+
+    document.body.classList.add('animating-theme');
+
+    setTimeout(() => {
+      setTheme(next);
+    }, 240);
+
+    setTimeout(() => {
+      document.body.classList.remove('animating-theme');
+      animating = false;
+    }, 580);
   });
 </script>
