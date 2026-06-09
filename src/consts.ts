@@ -11,7 +11,6 @@ export const LINKS = {
   twitter: 'https://x.com/mcurri_',
   email: 'mailto:mattia2002@gmail.com',
   youtube: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-  cv: 'https://mattiacurri.github.io/Curriculum-Vitae/',
   repo: 'https://github.com/mattiacurri/mattiacurri.github.io',
 };
 
