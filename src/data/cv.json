@@ -1,0 +1,95 @@
+{
+  "about": "Ciao! I'm Mattia, a Computer Science Master's student at the University of Bari. I build things at the intersection of deep learning, NLP and computer vision, always curious about the next hard problem.",
+  "tagline": "Master's Degree Computer Science Student — Software Developer — AI Engineer",
+  "email": "mattia2002@gmail.com",
+  "location": "Bari, Italy",
+  "languages": ["Italian (native)", "English (B2 Cambridge)"],
+  "education": [
+    {
+      "degree": "Master's Degree in Computer Science — AI Track",
+      "school": "University of Bari",
+      "period": "Sep 2024 – Current",
+      "note": "GPA: 4.0/4.0, entirely in English",
+      "courses": ["Numerical Methods", "Database II", "Formal Methods", "Fundamentals of AI", "Natural Language Processing", "Software Engineering for AI"]
+    },
+    {
+      "degree": "Bachelor's Degree in Computer Science",
+      "school": "University of Bari",
+      "period": "Sep 2021 – Jul 2024",
+      "note": "110 cum laude/110, GPA: 3.8/4.0",
+      "thesis": "Thesis: Supervised Learning for Semantic Segmentation of Aerial Images — 3-month research internship at CILab Lab under Prof. Gennaro Vessio, comparing CNN and Transformer architectures on the CVPR 2024 Agriculture-Vision Challenge (~50k images).",
+      "courses": ["Computational Intelligence", "Algorithms & Data Structures", "Databases", "Software Engineering", "Knowledge Engineering", "Information Retrieval", "Human-Computer Interaction", "Computer Networks"]
+    }
+  ],
+  "publications": [
+    {
+      "title": "FFT-UniBa at Cruciverb-IT: Special Length Tokens and CSP for Italian Crossword Solving",
+      "venue": "EVALITA 2026, CEUR-WS Vol-4195",
+      "url": "https://ceur-ws.org/Vol-4195/45.pdf",
+      "note": "Fine-tuned Italian T5 with length-constrained generation and CSP-based grid solver."
+    }
+  ],
+  "projects": [
+    {
+      "name": "Look Where It Matters: Distilling Vision Through Explanations",
+      "desc": "Explored whether Grad-CAM explanations improve knowledge distillation from Qwen2.5-VL-3B into a ViT student. Compared 7 distillation variants — global MSE baseline vs explanation-weighted losses with mean/attention/cross-attention probes. Built a blind-comparison arena (React/Express) with 3 local VLM judges for qualitative evaluation on 500 Mini-ImageNet images, plus BERTScore and LLM-as-a-judge automated metrics.",
+      "tags": ["PyTorch", "Hugging Face", "Grad-CAM", "React", "Express"],
+      "url": "https://github.com/mattiacurri/ExplanationGuidedDistillation"
+    },
+    {
+      "name": "End-to-end Code Comment Classification",
+      "desc": "Production-grade multi-label classification system categorizing code comments across Java, Python, and Pharo. Built end-to-end MLOps pipeline: DVC data versioning → CatBoost + SetFit dual-model training → MLflow experiment tracking → containerized FastAPI deployment with Gradio frontend. Prometheus/Grafana monitoring, sub-2s inference latency, 92.7% test coverage, published on HuggingFace Spaces with automated CI/CD.",
+      "tags": ["Python", "CatBoost", "Docker", "MLflow", "FastAPI", "Grafana"],
+      "url": "https://huggingface.co/spaces/se4ai2526-uniba-nygaard/NygaardCodeComment-frontend"
+    },
+    {
+      "name": "Temporal Link Prediction on Social Networks",
+      "desc": "Forecasted future social connections in the Gab network using Evolving Graph Convolutional Networks (EvolveGCN). Integrated 768-dim BERT embeddings from user posts as node features, trained incrementally across 6 temporal snapshots. Evaluated 4 experiment configurations varying learning rate and negative sampling, with GPU-accelerated metrics (cuDF/cuGraph) and t-SNE/UMAP embedding analysis.",
+      "tags": ["PyTorch", "NetworkX", "W&B", "cuDF", "cuGraph"],
+      "url": "https://github.com/mattiacurri/BigData-Project"
+    },
+    {
+      "name": "Corporate Credit Rating Prediction",
+      "desc": "Predicted corporate credit ratings (4 consolidated risk classes from 22 original categories) using RandomForest, XGBoost, and LightGBM. Tackled severe class imbalance with SMOTE, ADASYN, SMOTETomek, and SMOTEENN. Built a Bayesian Network with pgmpy for probabilistic inference on missing data. Achieved 86% balanced accuracy, evaluated with Cohen's Kappa and Geometric Mean.",
+      "tags": ["Scikit-learn", "XGBoost", "Pgmpy", "Pandas"],
+      "url": "https://github.com/mattiacurri/ProgettoICON"
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Leonardo Hackathon — Space Edition",
+      "date": "Apr 2026",
+      "url": "https://www.e-geos.it/en/news-stories/hackathon-leonardo-space-edition-test-your-talent-and-give-concrete-shape-to-innovation",
+      "note": "High-tech space-sector hackathon organized by Leonardo in collaboration with Talent Garden, focused on AI and automations for space applications. Selected as one of 50 finalists among 400 candidates — achieved 3rd place in team, winning a €2000 prize.",
+      "tags": ["AI", "Automation", "Robotics", "Space"]
+    },
+    {
+      "title": "First Italian University AI Competition",
+      "date": "Feb 2026",
+      "url": "https://ai2b.games/",
+      "note": "The competition involved using open data to create a solution for the city of Bari, focused on logistics and intelligent traffic management. Achieved 2nd place in the first stage out of 20 teams.",
+      "tags": ["AI", "LLM", "Open Data"]
+    },
+    {
+      "title": "ITAData Hack 2025",
+      "date": "Sep 2025",
+      "url": "https://journal.opendataplayground.com/itadatahack-2025/",
+      "note": "Anomaly Detection task on Hadoop Distributed File System logs. Secured 2nd place out of 15 teams.",
+      "tags": ["Python", "CatBoost", "Scikit-Learn"]
+    },
+    {
+      "title": "AI2B Hackathon Winner",
+      "date": "Jun 2025",
+      "url": "https://ai2b.games/",
+      "note": "Winning team of the AI2B Hackathon organized by University of Bari and AI2B, focused on AI and cybersecurity. Won first place out of 10 teams, obtaining a €500 prize.",
+      "tags": ["Cryptography", "Prompt Engineering"]
+    },
+    {
+      "title": "CyberChallenge 2024",
+      "date": "Mar–Jul 2024",
+      "url": "https://cyberchallenge.it/",
+      "note": "Qualified to the national stage by ranking in the top 6 of the local venue, reaching 21st place out of 43 teams at the national competition. Qualified for the local stage by being in the top 20 of the selection.",
+      "tags": ["Web", "Binary Exploitation", "Cryptography", "Network"]
+    }
+  ]
+}

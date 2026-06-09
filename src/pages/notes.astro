@@ -1,0 +1,57 @@
+---
+import Layout from '../components/Layout.astro';
+import NoteEntry from '../components/NoteEntry.astro';
+import { getCollection } from 'astro:content';
+
+const master = await getCollection('master');
+const bachelor = await getCollection('bachelor');
+const tutorato = await getCollection('tutorato');
+
+const masterItems = master[0]?.data ?? [];
+const bachelorItems = bachelor[0]?.data ?? [];
+const tutoratoItems = tutorato[0]?.data ?? [];
+---
+
+<Layout>
+  <h1>Notes</h1>
+  <p class="page-desc">A list of my course notes</p>
+
+  <section class="section">
+    <h2>Master's Degree</h2>
+    <div class="notes-grid">
+      {masterItems.map((item) => (
+        <NoteEntry
+          title={item.title}
+          description={item.description}
+          url={item.url}
+        />
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Bachelor's Degree</h2>
+    <div class="notes-grid">
+      {bachelorItems.map((item) => (
+        <NoteEntry
+          title={item.title}
+          description={item.description}
+          url={item.url}
+        />
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Tutorato</h2>
+    <div class="notes-grid">
+      {tutoratoItems.map((item) => (
+        <NoteEntry
+          title={item.title}
+          description={item.description}
+          url={item.url}
+        />
+      ))}
+    </div>
+  </section>
+</Layout>
