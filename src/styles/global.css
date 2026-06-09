@@ -1,4 +1,19 @@
-:root {
+/* Light mode */
+:root,
+:root[data-theme="light"] {
+  --bg: #f5f4f0;
+  --surface: #ffffff;
+  --text: #111111;
+  --text-muted: #5c5c5c;
+  --border: #d9d9d9;
+  --accent: #b85d2a;
+  --accent-hover: #a04d1a;
+  --radius: 4px;
+  --max-w: 960px;
+}
+
+/* Dark mode */
+:root[data-theme="dark"] {
   --bg: #0d0d0d;
   --surface: #141414;
   --text: #e6e6e6;
@@ -6,8 +21,6 @@
   --border: #262626;
   --accent: #d4783c;
   --accent-hover: #e8925a;
-  --radius: 4px;
-  --max-w: 960px;
 }
 
 *,
@@ -22,6 +35,7 @@ html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color-scheme: light dark;
 }
 
 body {
@@ -61,6 +75,12 @@ nav {
   height: 3rem;
 }
 
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
 .nav-logo {
   display: inline-flex;
   align-items: center;
@@ -75,6 +95,7 @@ nav {
 .nav-links {
   display: flex;
   gap: 1.5rem;
+  align-items: center;
 }
 
 .nav-links a {
@@ -88,6 +109,26 @@ nav {
 
 .nav-links a:hover {
   color: var(--text);
+}
+
+/* Theme toggle */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: var(--radius);
+  background: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color 0.15s, background 0.15s;
+}
+
+.theme-toggle:hover {
+  color: var(--text);
+  background: var(--surface);
 }
 
 /* Footer */
