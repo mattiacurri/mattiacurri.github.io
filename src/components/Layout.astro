@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import Navbar from './Navbar.astro';
 import Footer from './Footer.astro';
+import WebMcp from './WebMcp.astro';
 import { SITE, GA_ID } from '../consts';
 ---
 
@@ -30,6 +31,7 @@ import { SITE, GA_ID } from '../consts';
       <slot />
     </main>
     <Footer />
+    <WebMcp />
     <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}></script>
     <script define:vars={{ GA_ID }}>
       window.dataLayer = window.dataLayer || [];

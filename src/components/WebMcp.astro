@@ -1,0 +1,75 @@
+---
+import cv from '../data/cv.json';
+import { LINKS, SITE } from '../consts';
+
+const profile = {
+  name: SITE.author,
+  description: SITE.description,
+  tagline: cv.tagline,
+  about: cv.about,
+  education: cv.education,
+  publications: cv.publications,
+  projects: cv.projects,
+  achievements: cv.achievements,
+  languages: cv.languages,
+  contact: {
+    email: cv.email,
+    github: LINKS.github,
+    linkedin: LINKS.linkedin,
+  },
+};
+
+const pages = {
+  home: {
+    url: 'https://mattiacurri.github.io/',
+    description: 'Profile, education, publications, projects, and achievements.',
+  },
+  notes: {
+    url: 'https://mattiacurri.github.io/notes',
+    description: 'Course notes from master, bachelor, and tutoring work.',
+  },
+};
+---
+
+<script is:inline define:vars={{ profile, pages }}>
+  // @ts-nocheck -- profile and pages are injected by Astro's define:vars.
+  if (document.modelContext?.registerTool) {
+    const controller = new AbortController();
+    const options = { signal: controller.signal };
+
+    document.modelContext.registerTool({
+      name: 'get_portfolio_profile',
+      title: 'Get portfolio profile',
+      description: 'Returns Mattia Curri\'s public portfolio information and contact links.',
+      inputSchema: {
+        type: 'object',
+        properties: {},
+        additionalProperties: false,
+      },
+      annotations: { readOnlyHint: true },
+      execute: async () => profile,
+    }, options).catch(() => {});
+
+    document.modelContext.registerTool({
+      name: 'get_portfolio_page',
+      title: 'Get portfolio page',
+      description: 'Returns the canonical URL and description for a page on this portfolio.',
+      inputSchema: {
+        type: 'object',
+        properties: {
+          page: {
+            type: 'string',
+            enum: ['home', 'notes'],
+            description: 'The portfolio page to locate.',
+          },
+        },
+        required: ['page'],
+        additionalProperties: false,
+      },
+      annotations: { readOnlyHint: true },
+      execute: async ({ page }) => pages[page],
+    }, options).catch(() => {});
+
+    window.addEventListener('pagehide', () => controller.abort(), { once: true });
+  }
+</script>

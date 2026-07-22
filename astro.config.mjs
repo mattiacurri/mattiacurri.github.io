@@ -1,7 +1,19 @@
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
+import { copyFile } from 'node:fs/promises';
+
+const sitemapRootAlias = {
+  name: 'sitemap-root-alias',
+  hooks: {
+    'astro:build:done': async ({ dir }) => {
+      await copyFile(new URL('sitemap-0.xml', dir), new URL('sitemap.xml', dir));
+    },
+  },
+};
 
 export default defineConfig({
   site: 'https://mattiacurri.github.io',
   outDir: './docs',
   trailingSlash: 'never',
+  integrations: [sitemap(), sitemapRootAlias],
 });

@@ -9,7 +9,7 @@
   --accent: #b85d2a;
   --accent-hover: #a04d1a;
   --radius: 4px;
-  --max-w: 960px;
+  --max-w: 1180px;
 }
 
 /* Dark mode */
@@ -219,6 +219,10 @@ a:hover {
   padding: 3rem 0 2.5rem;
 }
 
+.hero-content {
+  max-width: 760px;
+}
+
 .tagline {
   color: var(--text-muted);
   font-size: 0.9375rem;
@@ -262,8 +266,14 @@ a:hover {
 
 .item-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem 2.5rem;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 1.5rem 4.5rem;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 4.5rem;
 }
 
 /* Entry */
@@ -350,7 +360,7 @@ a:hover {
 
 .notes-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.5rem;
 }
 
@@ -394,10 +404,26 @@ a:hover {
 }
 
 /* Responsive */
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   .item-grid,
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .notes-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
   .notes-grid {
     grid-template-columns: 1fr;
+  }
+
+  .about,
+  .entry-note,
+  .page-desc {
+    text-align: left;
   }
 
   main {
