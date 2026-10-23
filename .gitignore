@@ -1,6 +1,1 @@
-node_modules/
-.astro/
-dist/
-/.quarto/
-
-**/*.quarto_ipynb
+.DS_Store
