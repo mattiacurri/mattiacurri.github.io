@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Camera-radar fusion for vehicle detection in adverse weather, on the RADIATE dataset. ICAI-TEMS 2026.">
+<meta name="author" content="Mattia Curri">
+<title>Weather-Aware Multimodal Sensor Fusion · Mattia Curri</title>
+<link rel="canonical" href="https://mattiacurri.github.io/papers/weather-aware-fusion/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Mattia Curri">
+<meta property="og:title" content="Weather-Aware Multimodal Sensor Fusion · Mattia Curri">
+<meta property="og:description" content="Camera-radar fusion for vehicle detection in adverse weather, on the RADIATE dataset. ICAI-TEMS 2026.">
+<meta property="og:url" content="https://mattiacurri.github.io/papers/weather-aware-fusion/">
+<meta property="og:image" content="https://mattiacurri.github.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mattia Curri, AI engineer">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="/style.css">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MC38LFVB06"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MC38LFVB06');</script>
+</head>
+<body class="doc">
+<header>
+<h1><a href="/">Mattia Curri</a></h1>
+<nav>
+<div class="pages">
+<a href="/notes"><svg class="icon" aria-hidden="true"><use href="/icons.svg#book"/></svg>Notes</a>
+<a href="/Mattia_Curri_CV.pdf"><svg class="icon" aria-hidden="true"><use href="/icons.svg#download"/></svg>CV</a>
+</div>
+<div class="social">
+<a href="https://github.com/mattiacurri" aria-label="GitHub" title="GitHub"><svg class="icon" aria-hidden="true"><use href="/icons.svg#github"/></svg></a>
+<a href="https://www.linkedin.com/in/mattiacurri/" aria-label="LinkedIn" title="LinkedIn"><svg class="icon" aria-hidden="true"><use href="/icons.svg#linkedin"/></svg></a>
+<a href="https://x.com/mcurri_" aria-label="X" title="X"><svg class="icon" aria-hidden="true"><use href="/icons.svg#x"/></svg></a>
+<a href="mailto:mattia2002@gmail.com" aria-label="Email" title="Email"><svg class="icon" aria-hidden="true"><use href="/icons.svg#mail"/></svg></a>
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" aria-label="YouTube" title="YouTube"><svg class="icon" aria-hidden="true"><use href="/icons.svg#youtube"/></svg></a>
+<button id="search" type="button" aria-label="Search"></button>
+<button id="theme" type="button" aria-label="Toggle dark mode"></button>
+</div>
+</nav>
+<p class="tagline">Publication.</p>
+</header>
+
+<main class="paper">
+<div>
+<p class="meta">ICAI-TEMS 2026 · Pisa, Italy, 10–13 November 2026 · To appear</p>
+<h2 class="paper-title">Weather-Aware Multimodal Sensor Fusion for Robust Perception</h2>
+<p class="authors">M. Borgo, <b>M. Curri</b>, O. Zaroual, P. Serio, G. Pisaneschi, M. G. C. A. Cimino</p>
+<p class="meta">2nd IEEE International Conference on Application of Information Technologies in Engineering, Management and Science</p>
+
+<section>
+<h2>Summary</h2>
+<p>The paper fuses camera and radar data to detect vehicles in adverse weather, and evaluates the approach on the RADIATE dataset.</p>
+<p>The research was carried out within the UIS Research Centre's <i>Students for Italy's Future</i> project. The PDF will be linked here once the proceedings are published.</p>
+</section>
+</div>
+
+<div>
+<section id="bibtex">
+<h2>BibTeX</h2>
+<div class="bibtex">
+<button class="text" type="button" data-copy><svg class="icon" aria-hidden="true"><use href="/icons.svg#copy"/></svg>Copy</button>
+<pre>@inproceedings{borgo2026weather,
+  title     = {Weather-Aware Multimodal Sensor Fusion
+               for Robust Perception},
+  author    = {Borgo, M. and Curri, M. and Zaroual, O. and
+               Serio, P. and Pisaneschi, G. and Cimino, M. G. C. A.},
+  booktitle = {Proceedings of the 2nd IEEE International Conference
+               on Application of Information Technologies in
+               Engineering, Management and Science (ICAI-TEMS 2026)},
+  address   = {Pisa, Italy},
+  year      = {2026},
+  note      = {To appear}
+}</pre>
+</div>
+</section>
+</div>
+</main>
+<script src="/theme.js"></script>
+<script type="module" src="/palette.js"></script>
+<script>
+for (const b of document.querySelectorAll('[data-copy]')) {
+  b.addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(b.nextElementSibling.textContent); b.lastChild.textContent = 'Copied'; }
+    catch { b.lastChild.textContent = 'Select and copy'; }
+    setTimeout(() => (b.lastChild.textContent = 'Copy'), 1600);
+  });
+}
+</script>
+</body>
+</html>

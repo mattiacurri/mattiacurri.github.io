@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="An Italian T5 model with length tokens and a CSP grid solver for Italian crosswords. EVALITA 2026.">
+<meta name="author" content="Mattia Curri">
+<title>FFT-UniBa at Cruciverb-IT · Mattia Curri</title>
+<link rel="canonical" href="https://mattiacurri.github.io/papers/cruciverb-it/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Mattia Curri">
+<meta property="og:title" content="FFT-UniBa at Cruciverb-IT · Mattia Curri">
+<meta property="og:description" content="An Italian T5 model with length tokens and a CSP grid solver for Italian crosswords. EVALITA 2026.">
+<meta property="og:url" content="https://mattiacurri.github.io/papers/cruciverb-it/">
+<meta property="og:image" content="https://mattiacurri.github.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mattia Curri, AI engineer">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="/style.css">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MC38LFVB06"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MC38LFVB06');</script>
+</head>
+<body class="doc">
+<header>
+<h1><a href="/">Mattia Curri</a></h1>
+<nav>
+<div class="pages">
+<a href="/notes"><svg class="icon" aria-hidden="true"><use href="/icons.svg#book"/></svg>Notes</a>
+<a href="/Mattia_Curri_CV.pdf"><svg class="icon" aria-hidden="true"><use href="/icons.svg#download"/></svg>CV</a>
+</div>
+<div class="social">
+<a href="https://github.com/mattiacurri" aria-label="GitHub" title="GitHub"><svg class="icon" aria-hidden="true"><use href="/icons.svg#github"/></svg></a>
+<a href="https://www.linkedin.com/in/mattiacurri/" aria-label="LinkedIn" title="LinkedIn"><svg class="icon" aria-hidden="true"><use href="/icons.svg#linkedin"/></svg></a>
+<a href="https://x.com/mcurri_" aria-label="X" title="X"><svg class="icon" aria-hidden="true"><use href="/icons.svg#x"/></svg></a>
+<a href="mailto:mattia2002@gmail.com" aria-label="Email" title="Email"><svg class="icon" aria-hidden="true"><use href="/icons.svg#mail"/></svg></a>
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" aria-label="YouTube" title="YouTube"><svg class="icon" aria-hidden="true"><use href="/icons.svg#youtube"/></svg></a>
+<button id="search" type="button" aria-label="Search"></button>
+<button id="theme" type="button" aria-label="Toggle dark mode"></button>
+</div>
+</nav>
+<p class="tagline">Publication.</p>
+</header>
+
+<main class="paper">
+<div>
+<p class="meta">EVALITA 2026 · CEUR Workshop Proceedings, Vol. 4195</p>
+<h2 class="paper-title">FFT-UniBa at Cruciverb-IT: Special Length Tokens and CSP for Italian Crossword Solving</h2>
+<p class="authors">Andrea Porcelli, Filippo Di Gravina, Emanuele Fontana, <b>Mattia Curri</b> (corresponding author), Francesco Damiano Di Gregorio</p>
+<p class="meta">Department of Computer Science, University of Bari Aldo Moro</p>
+<p class="links"><a href="https://ceur-ws.org/Vol-4195/45.pdf">PDF</a> <a href="https://github.com/mattiacurri/fftuniba-cruciverbit">Code</a> <a href="#bibtex">BibTeX</a></p>
+
+<section>
+<h2>Abstract</h2>
+<p>Cruciverb-IT, a shared task proposed at EVALITA 2026, aims to encourage research in automated crossword solving systems by providing a challenging testbed for developing and evaluating systems focused on crossword puzzle solving. The proposed sub-tasks are the following: answering clues extracted from Italian crosswords and autonomously solving Italian crossword grids. To succeed in crossword solving, models must acquire meta-linguistic abilities beyond pure semantic understanding, like counting individual characters or enforcing strict length and pattern constraints typical of crossword answers. In this paper, we present our approach to both sub-tasks, which involves fine-tuning an Italian T5 model with special tokens to represent answer lengths and employing a constraint satisfaction problem (CSP) solver for grid filling. The system demonstrates competitive performance on both tasks, showcasing the effectiveness of our methods in mitigating the challenges posed by crossword puzzles.</p>
+</section>
+
+<section>
+<h2>How it works</h2>
+<p><b>Answering clues.</b> We fine-tuned it5-efficient-small-el32, an Italian T5 model, on about 410,000 clue-answer pairs and 313,000 dictionary definitions. Every example wraps the answer in tokens that state its length. The input <code>indovinello: Capital of Italy [SL=4]</code> has the target <code>[SL=4] Rome [EL=4]</code>, so the model learns where a four-letter word ends, and nothing has to trim its output to length afterwards. Removing these tokens lowers MRR from 0.63 to 0.52.</p>
+<p><b>Filling grids.</b> Each empty slot is a variable. Its domain is the model's top candidates ranked by perplexity, plus a few dictionary words that the solver uses only after the model's candidates run out. The solver seeds the grid with high-confidence answers and runs a depth-first search with backtracking from each seed. Budgets grow with the grid: 100 seeds and 100 candidates for grids up to 6×6, and 2,000 seeds with 600 candidates above 10×10.</p>
+</section>
+
+<section>
+<h2>Results</h2>
+<table class="results">
+<thead><tr><th>Answering clues</th><th class="num">Acc@1</th><th class="num">Acc@10</th><th class="num">MRR</th></tr></thead>
+<tbody>
+<tr class="ours"><td>Ours</td><td class="num">0.58</td><td class="num">0.75</td><td class="num">0.63</td></tr>
+<tr><td>BM25 baseline</td><td class="num">0.40</td><td class="num">0.62</td><td class="num">0.46</td></tr>
+</tbody>
+</table>
+<table class="results" style="margin-top:1.2em">
+<thead><tr><th>Filling grids</th><th class="num">Letters</th><th class="num">Words</th><th class="num">Full grids</th></tr></thead>
+<tbody>
+<tr class="ours"><td>Ours</td><td class="num">92%</td><td class="num">85%</td><td class="num">34%</td></tr>
+<tr><td>Max-SMT baseline</td><td class="num">73%</td><td class="num">58%</td><td class="num">8%</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="bibtex">
+<h2>BibTeX</h2>
+<div class="bibtex">
+<button class="text" type="button" data-copy><svg class="icon" aria-hidden="true"><use href="/icons.svg#copy"/></svg>Copy</button>
+<pre>@inproceedings{porcelli2026fftuniba,
+  title     = {{FFT-UniBa} at {Cruciverb-IT}: Special Length Tokens
+               and {CSP} for {Italian} Crossword Solving},
+  author    = {Porcelli, Andrea and Di Gravina, Filippo and
+               Fontana, Emanuele and Curri, Mattia and
+               Di Gregorio, Francesco Damiano},
+  booktitle = {Proceedings of the Ninth Evaluation Campaign of
+               Natural Language Processing and Speech Tools
+               for Italian (EVALITA 2026)},
+  series    = {CEUR Workshop Proceedings},
+  volume    = {4195},
+  year      = {2026},
+  url       = {https://ceur-ws.org/Vol-4195/45.pdf}
+}</pre>
+</div>
+</section>
+</div>
+
+<section class="demo" id="cw-demo">
+<h2>Watch the solver</h2>
+<p>A 5×5 grid with hand-written clues and candidate lists (not real model output), solved the way the paper describes: seed with the most confident answer, fill slots depth-first, and backtrack when crossing letters disagree.</p>
+<div class="cw-wrap" style="margin-top:1.2em">
+<div class="cw" aria-label="Crossword grid"></div>
+<ul class="clues"></ul>
+</div>
+<div class="controls">
+<button class="text" type="button" data-act="play">Play</button>
+<button class="text" type="button" data-act="step">Step</button>
+<button class="text" type="button" data-act="reset">Reset</button>
+</div>
+<p class="status" aria-live="polite"></p>
+</section>
+</main>
+<script src="/theme.js"></script>
+<script type="module" src="/palette.js"></script>
+<script>
+for (const b of document.querySelectorAll('[data-copy]')) {
+  b.addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(b.nextElementSibling.textContent); b.lastChild.textContent = 'Copied'; }
+    catch { b.lastChild.textContent = 'Select and copy'; }
+    setTimeout(() => (b.lastChild.textContent = 'Copy'), 1600);
+  });
+}
+</script>
+<script type="module" src="demo.js"></script>
+</body>
+</html>

@@ -4,9 +4,9 @@
     {
       "name": "portfolio-discovery",
       "type": "skill-md",
-      "description": "Discover Mattia Curri's public profile, projects, publications, and course notes.",
+      "description": "Facts about Mattia Curri: education, theses, publications, projects, awards, teaching, course notes, skills, and contact links.",
       "url": "https://mattiacurri.github.io/.well-known/agent-skills/portfolio-discovery/SKILL.md",
-      "digest": "sha256:dbcafa398fdb42cdd0ff1d6b641ff214c40252521fb38bec3ba7302f962517fa"
+      "digest": "sha256:3746678c906a391f6d3f5e88dd88b5ca68d8c2258ab75f5fa48f7708a9d452e5"
     }
   ]
 }
